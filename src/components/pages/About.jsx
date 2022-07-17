@@ -1,6 +1,6 @@
 import React from "react"
 import { Heading } from "../common/Heading"
-import { about } from "../data/dummydata"
+import { about, skills } from "../data/dummydata"
 
 export const About = () => {
   return (
@@ -16,8 +16,7 @@ export const About = () => {
                 <Heading title='About Me' />
                 <p>{val.desc}</p>
                 <p>{val.desc1}</p>
-                <button>Download CV</button>
-                <button className='primaryBtn'>Download CV</button>
+                <a href="https://drive.google.com/file/d/1nnQ9mfu1AsuPFXYqOYNTT_3Qx_n84mZI/view?usp=sharing" target="_blank"><button>Download CV</button></a>
               </div>
             </>
           ))}

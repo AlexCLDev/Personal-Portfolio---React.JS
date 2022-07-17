@@ -7,10 +7,10 @@ const Footer = () => {
       <footer>
         {social.map((item) => (
           <>
-            <i data-aos='zoom-in'>{item.icon}</i>
+            <a href={item.url} target="_blank"><i data-aos='zoom-in'>{item.icon}</i></a>
           </>
         ))}
-        <p data-aos='zoom-in'>All Right Resceved 2018</p>
+        <p data-aos='zoom-in'>&copy;All Right Resceved 2022 | Alexander Coronado</p>
       </footer>
     </>
   )

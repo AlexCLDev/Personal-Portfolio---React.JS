@@ -21,9 +21,9 @@ export const Hero = () => {
               />
             </h1>
             <p data-aos='fade-left'>{val.desc}</p>
-            <button className='primaryBtn' data-aos='fade-up-right'>
+            <a href="https://drive.google.com/file/d/1nnQ9mfu1AsuPFXYqOYNTT_3Qx_n84mZI/view?usp=sharing" target="_blank"><button className='primaryBtn' data-aos='fade-up-right'>
               Download CV
-            </button>
+            </button></a>
           </div>
         ))}
       </section>

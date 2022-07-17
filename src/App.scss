@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primaryBackground: #212222;
   --secondaryBackground: #2f3030;
@@ -14,25 +16,38 @@
   --black: #000;
   --sliver: #bac8d3;
 }
+
 body {
   background-color: var(--headingColor);
   color: var(--white);
   font-family: "Poppins", sans-serif;
 }
+
 a {
   color: var(--greyDark);
   text-decoration: none;
   transition: 0.5s;
 }
+
 a:hover {
   color: var(--primaryColor);
 }
+
+.active {
+  background-color: #e0a80d;
+
+  a {
+    color: var(--primaryColor);
+  }
+}
+
 p {
   color: var(--sliver);
   font-size: 15px;
   line-height: 30px;
   margin: 20px 0;
 }
+
 h1,
 h2,
 h3,
@@ -41,14 +56,17 @@ h5,
 h6 {
   font-weight: 400;
 }
+
 .container {
   max-width: 80%;
   margin: auto;
 }
+
 .flexsb {
   display: flex;
   justify-content: space-between;
 }
+
 button {
   border: none;
   outline: none;
@@ -60,14 +78,24 @@ button {
   border-radius: 50px;
   margin-top: 20px;
   cursor: pointer;
+  transition: all 300ms;
+
+  &:hover {
+    color: var(--white);
+    background-color: transparent;
+    border: 2px solid var(--primaryColor);
+  }
 }
+
 .fontSize {
   font-size: 20px;
 }
+
 .primaryBtn {
   background: none;
   border: 2px solid var(--primaryColor);
 }
+
 /*---------header-------------*/
 header {
   background-color: var(--headingColor);
@@ -79,28 +107,34 @@ header {
   width: 100%;
   z-index: 999;
 }
+
 header a {
   margin-left: 40px;
 }
+
 .toggle {
   cursor: pointer;
   color: var(--white);
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   header .nav {
     display: none;
   }
+
   header a {
     width: 100%;
     display: block;
     color: var(--white);
   }
+
   .toggle {
     display: block;
     font-size: 25px;
     background: none;
   }
+
   .hideMenu {
     display: block;
     position: absolute;
@@ -110,20 +144,24 @@ header a {
     background-color: var(--headingColor);
   }
 }
+
 /*---------header-------------*/
 section {
   height: 90vh;
   display: flex;
   align-items: center;
 }
+
 .flex {
   display: flex;
 }
+
 
 /*---------hero-------------*/
 .hero {
   position: relative;
 }
+
 .hero::after {
   content: "";
   position: absolute;
@@ -136,11 +174,13 @@ section {
   width: 100%;
   height: 90vh;
 }
+
 .heroContent {
   max-width: 50%;
   margin: auto;
   text-align: center;
 }
+
 .hero h1 {
   font-size: 60px;
   font-weight: 600;
@@ -159,17 +199,28 @@ section {
 /*---------about-------------*/
 .about .primaryBtn {
   margin-left: 20px;
+
+  &:hover {
+    color: white;
+  }
 }
+
+
 .about .heading {
   text-align: left;
-  margin: 0;
+  margin: 0px;
 }
+
 .left {
   width: 35%;
+
 }
+
 .right {
   width: 65%;
+  margin-left: 40px;
 }
+
 
 /*---------about-------------*/
 .grid3 {
@@ -178,17 +229,48 @@ section {
   grid-gap: 30px;
 }
 
+.gridp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+
+  h3 {
+    display: flex;
+    float: left;
+  }
+}
+
 /*---------services-------------*/
 .services .box {
   background-color: var(--primaryBackground);
   padding: 35px;
+  transition: all 300ms;
+
+
+  i {
+    color: var(--primaryColor);
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  &:hover{
+    background-color:#cacaca ;
+    color: black;
+    box-shadow: 0px 0px 15px #e0a80d;
+
+    h3{
+      color: #000;
+    }
+
+    p{
+      color: black;
+    }
+  }
 }
-.services i {
-  color: var(--primaryColor);
-}
-.services h3 {
-  margin-top: 20px;
-}
+
+
 /*---------services-------------*/
 .grid4 {
   grid-template-columns: repeat(4, 1fr);
@@ -202,13 +284,16 @@ section {
   margin-top: 80px;
   position: relative;
 }
+
 .hero.counter::after {
   background-image: url("../public/images/some-facts-bg.png");
   height: 50vh;
 }
+
 .counter h1 {
   margin: 0;
 }
+
 /*---------counter-------------*/
 /*---------portfolio-------------*/
 
@@ -216,14 +301,17 @@ article {
   margin-top: 50px;
   margin-bottom: 80px;
 }
+
 article img {
   width: 100%;
   height: 100%;
 }
+
 article .box {
   position: relative;
   transition: 0.5s;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -239,6 +327,7 @@ article .box {
   transition: 0.5s;
   z-index: 2;
 }
+
 .overlay::after {
   content: "";
   position: absolute;
@@ -251,20 +340,28 @@ article .box {
   transition: 0.5s;
   z-index: -1;
 }
+
 article .box:hover .overlay::after,
 article .box:hover .overlay {
   opacity: 1;
 }
+
 .catButton {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 0;
 }
+
 .catButton button {
   text-transform: capitalize;
   margin-right: 20px;
 }
+
+.overlay:hover {
+  color: white;
+}
+
 /*---------portfolio-------------*/
 /*---------testimonials-------------*/
 .testimonials {
@@ -273,12 +370,15 @@ article .box:hover .overlay {
   justify-content: center;
   text-align: center;
 }
+
 .testimonials::after {
   background-image: url("../public/images/testimonials-bg.png");
 }
+
 .testimonials .box {
   max-width: 60%;
 }
+
 .testimonials i {
   background-color: var(--white);
   font-size: 20px;
@@ -287,6 +387,7 @@ article .box:hover .overlay {
   display: inline-block;
   color: var(--primaryColor);
 }
+
 .testimonials .img {
   display: flex;
   align-items: center;
@@ -297,6 +398,7 @@ article .box:hover .overlay {
   border-radius: 50%;
   border: 3px solid var(--primaryColor);
 }
+
 .testimonials img {
   width: 100px;
   height: 100px;
@@ -304,35 +406,43 @@ article .box:hover .overlay {
   border-radius: 50%;
   object-fit: cover;
 }
+
 label {
   color: var(--primaryColor);
   margin: 10px 0;
   display: inline-block;
 }
+
 /*---------testimonials-------------*/
 /*---------blog-------------*/
 .blog img {
   width: 100%;
 }
+
 .blog .box {
   background-color: var(--primaryBackground);
   border-radius: 10px;
 }
+
 .blog .text {
   padding: 10px 30px;
 }
+
 /*---------blog-------------*/
 /*---------contact-------------*/
 .contact {
   margin: 20px 0;
 }
+
 .contact .right,
 .contact .left {
   padding: 20px;
 }
+
 .contact .flex input:nth-child(1) {
   margin-right: 10px;
 }
+
 .contact button,
 .contact textarea,
 .contact input {
@@ -342,7 +452,9 @@ label {
   outline: none;
   margin: 10px 0;
   border-radius: 5px;
+  max-width: 100%;
 }
+
 /*---------contact-------------*/
 /*---------footer-------------*/
 footer {
@@ -351,15 +463,18 @@ footer {
   padding: 70px;
   margin-top: 50px;
 }
+
 footer i {
   margin: 5px;
   color: var(--primaryColor);
 }
+
 /*---------footer-------------*/
 @media screen and (max-width: 768px) {
   .hero {
     height: 60vh;
   }
+
   .heroContent {
     max-width: 80%;
   }
@@ -371,22 +486,28 @@ footer i {
     width: 100%;
     height: 60vh;
   }
+
   section {
     height: auto;
     padding-top: 50px;
   }
+
   .contact .flexsb,
-  .about .flex {
+  .about .flex,
+  .about2 .flex {
     flex-direction: column;
   }
+
   .right,
   .left {
     width: 100%;
   }
+
   .grid4,
   .grid3 {
     grid-template-columns: repeat(2, 1fr);
   }
+
   article {
     margin: 0;
     padding-bottom: 50px;

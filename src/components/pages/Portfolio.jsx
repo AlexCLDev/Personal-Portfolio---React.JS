@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Heading } from "../common/Heading"
+import { Link } from "react-router-dom"
 import { portfolio } from "../data/dummydata"
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined"
 
@@ -7,7 +8,7 @@ const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))]
 export const Portfolio = () => {
   const [list, setLists] = useState(portfolio)
   const [category, setCategory] = useState(allCategory)
-  console.log(setCategory)
+  console.log(category)
 
   const filterItems = (category) => {
     const newItems = portfolio.filter((item) => item.category === category)
@@ -32,16 +33,17 @@ export const Portfolio = () => {
           </div>
           <div className='content grid3'>
             {list.map((item) => (
-              <div className='box' data-aos='fade-up'>
+              <Link to={"/portfolio/" + item.id}><div className='box' data-aos='fade-up'>
                 <div className='img'>
-                  <img src={item.cover} alt='' />
+                <img src={item.cover} alt='' />
                 </div>
                 <div className='overlay'>
                   <h3>{item.title}</h3>
                   <span>{item.name}</span>
-                  <VisibilityOutlinedIcon />
+                  <VisibilityOutlinedIcon/>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
         </div>

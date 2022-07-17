@@ -169,11 +169,13 @@ export const portfolio = [
   },
   {
     id: 6,
-    cover: "../images/port/port6.jpg",
-    name: "Brand",
+    cover: "../images/port/p6.png",
+    name: "Alexander Coronado Portfolio",
     category: "react",
-    title: "Brex Logo",
-    tech: "Wordpress, PHP, HTML, CSS, WooComerce, Plugins"
+    title: "Personal Portfolio",
+    tech: "React.js, JavaScript, HTML5, CSS3, Sass, Material UI",
+    url: "https://alexcoronado.com",
+    git: "https://github.com/AlexCLDev/Personal-Portfolio---React.JS"
   },
 ]
 export const testimonials = [
